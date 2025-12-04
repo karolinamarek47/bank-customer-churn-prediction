@@ -11,6 +11,11 @@ The final **Random Forest** model achieved a **76% Recall rate**, allowing the b
 * **Machine Learning:** Scikit-Learn (Logistic Regression, Random Forest, KNN Imputer)
 * **Explainability:** SHAP
 
+## 📋 Prerequisites
+To run this project, you will need:
+* **Python 3.12.4** (or higher)
+* **Jupyter Notebook** (installed via Anaconda or pip)
+
 ## 💼 Business Context & Strategy
 * **The Problem:** Customer churn leads to lost revenue and wasted acquisition spend.
 * **The Goal:** Build a binary classification model to segment customers based on their probability of churning.
