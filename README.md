@@ -33,7 +33,6 @@ The dataset contains **10,000 records** of bank customers, including demographic
 | **Engagement** | `Tenure`, `IsActiveMember` |
 | **Target** | `Exited` (0 = Retained, 1 = Churned) |
 
-*Data Source: Maven Analytics*
 
 ## 🛠️ Methodology
 1.  **Data Preprocessing:**
@@ -72,3 +71,9 @@ Using **SHAP (SHapley Additive exPlanations)** values, we identified the key dri
 
 ---
 *Author: Karolina Marek*
+---
+## ℹ️ Data Source & License
+
+* **Dataset:** Bank Customer Churn
+* **Source:** Kaggle (provided by Maven Analytics)
+* **License:** Public Domain
