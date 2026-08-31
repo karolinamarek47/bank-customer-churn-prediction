@@ -3,7 +3,7 @@
 ## 📋 Executive Summary
 Customer retention is a critical metric in the banking industry, where the cost of acquiring a new customer is significantly higher than retaining an existing one. This project develops a machine learning pipeline to predict customer attrition with a focus on **Recall**. By identifying at-risk customers early, the bank can deploy targeted interventions to reduce revenue loss.
 
-The final **XGBoost** model achieved a **79% Recall rate**, allowing the bank to proactively target approximately  4 out of 5 potential churners.
+The final **XGBoost** model achieved a 80% Accuracy rate, and a **79% Recall rate** allowing the bank to proactively target approximately  4 out of 5 potential churners.
 
 ## 💻 Technologies Used
 * **Python:** Pandas, NumPy
@@ -43,16 +43,16 @@ The dataset contains **10,000 records** of bank customers, including demographic
     * Identified significant class imbalance (20% Churn vs. 80% Retained).
     * Noted overlap in feature distributions, suggesting non-linear models would outperform linear ones.
 3. Model Development
-    * **Baseline (Logistic Regression):** Initial model showed **79% Accuracy** but failed critically on Recall (**4%**), ignoring the minority class.
     * **Optimization Attempts:** Utilized `RandomizedSearchCV` to tune multiple hyperparameters (including `class_weight='balanced'`).
-    * **Strategic Pivot (Random Forest, XGBoost):** To achieve better overall performance, I transitioned to a **Random Forest classifier**, and then **XGBoost** model. After hyperparameter tuning, XGBoost final model achieved the best balance: **Accuracy 80%** and **Recall 79%** on the test set..
+    * **Baseline (Logistic Regression):** Initial model showed **71% Recall** but failed on Precision (**38%**)
+    * **Strategic Pivot (Random Forest, XGBoost):** To achieve better overall performance, I transitioned to a **Random Forest classifier**, and then **XGBoost** model. After hyperparameter tuning, XGBoost final model achieved the best balance: **Accuracy 80%** and **Recall 79%** on the test set.
 
 ## 📈 Key Results
-| Model | Recall Score | Observations |
-| :--- | :--- | :--- |
-| **Logistic Regression (Tuned)** | 71% | Establishes a solid baseline with 71% recall. |
-| **Random Forest (Tuned)** | **73%** | Offers a better balance of precision and recall, capturing non-linear relationships. |
-| **XGboost (Tuned)** | **79%** | **Best Performer.** Stands out as the ultimate best performer with 79% recall, offering the optimal precision-recall trade-off for complex data. |
+| Model | Recall Score | Accuracy | Observations |
+| :--- | :--- | :--- |:--- |
+| **Logistic Regression (Tuned)** | 71% | 72% |Establishes a solid baseline with 71% recall. |
+| **Random Forest (Tuned)** | **73%** | 80% |Offers a better balance of accuracy and recall, capturing non-linear relationships. |
+| **XGboost (Tuned)** | **79%** | 80% |**Best Performer.** Stands out as the ultimate best performer with 79% recall, offering the optimal precision-recall trade-off for complex data. |
 
 ## 🔍 Insights & Strategic Recommendations
 Using **SHAP (SHapley Additive exPlanations)** values, we identified the key drivers of churn and formulated the following strategies:
